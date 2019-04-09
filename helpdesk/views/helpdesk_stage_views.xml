@@ -36,7 +36,7 @@
     </record>
 
     <record id="helpdesk_stage_action" model="ir.actions.act_window">
-      <field name="name">HelpDesk Stage</field>
+      <field name="name">Helpdesk Stage</field>
       <field name="res_model">helpdesk.stage</field>
       <field name="view_mode">tree,form</field>
       <field name="help" type="html">

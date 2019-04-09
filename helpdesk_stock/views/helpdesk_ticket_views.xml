@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="ticket_view_form_inherit" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.view.form.inherit</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk.ticket_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='cause']" position="after">
+                <group>
+                    <field name="picking_ids"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
