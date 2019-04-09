@@ -46,6 +46,16 @@ class HelpdeskTicket(models.Model):
         comodel_name='helpdesk.stage',
         group_expand='_read_group_stage_ids',
         string='Stage')
+    cause_id = fields.Many2one(
+        comodel_name="helpdesk.ticket.cause",
+        string="Cause")
+    decision = fields.Text(
+        string="Decision",
+        required=False)
+    action_ids = fields.One2many(
+        comodel_name="helpdesk.ticket.action",
+        inverse_name="ticket_id",
+        string="Actions")
 
     def assign_to_me(self):
         self.write({'user_id': self.env.uid})
